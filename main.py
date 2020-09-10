@@ -13,8 +13,8 @@ def index():
 
     return render_template("index.html", some_text=some_text, current_year=current_year, cities=cities)
 
-@app.route("/about-me")
-def about_me():
+@app.route("/about-me", methods=["GET"])
+def about():
     return render_template("about.html")
 
 if __name__ == '__main__':
