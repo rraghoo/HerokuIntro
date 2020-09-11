@@ -16,7 +16,7 @@ def index():
 def about():
     if request.method == "GET":
         user_name = request.cookies.get("user_name")
-        return render_template("about.html")
+        return render_template("about.html", name=user_name)
     elif request.method == "POST":
         contact_name = request.form.get("contact-name")
         contact_email = request.form.get("contact-email")
