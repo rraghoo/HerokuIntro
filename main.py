@@ -25,6 +25,9 @@ def about():
         print(contact_email)
         print(contact_message)
 
+        response = make_response(render_template("success.html"))
+        response.set_cookie("user_name", contact_name)
+
         return render_template("success.html")
 
 @app.route("/contact", methods=["POST"])
